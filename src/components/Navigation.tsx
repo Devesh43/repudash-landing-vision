@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Logo from "./Logo";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,7 +28,9 @@ const Navigation = () => {
       }`}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <Logo animated={isScrolled} />
+        <Link to="/">
+          <Logo animated={isScrolled} />
+        </Link>
         
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center gap-8">
@@ -43,6 +46,9 @@ const Navigation = () => {
           <a href="#use-cases" className="text-gray-300 hover:text-repulens-yellow transition-colors">
             Use Cases
           </a>
+          <Link to="/pricing" className="text-gray-300 hover:text-repulens-yellow transition-colors">
+            Pricing
+          </Link>
           <Button className="bg-repulens-yellow text-repulens-black hover:bg-repulens-gold">
             Get Started
           </Button>
@@ -74,6 +80,9 @@ const Navigation = () => {
           <a href="#use-cases" className="text-gray-300 hover:text-repulens-yellow transition-colors py-2">
             Use Cases
           </a>
+          <Link to="/pricing" className="text-gray-300 hover:text-repulens-yellow transition-colors py-2">
+            Pricing
+          </Link>
           <Button className="bg-repulens-yellow text-repulens-black hover:bg-repulens-gold w-full">
             Get Started
           </Button>
