@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Logo from "./Logo";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,10 +27,7 @@ const Navigation = () => {
       }`}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center gap-2">
-          <div className="h-8 w-8 bg-repulens-yellow rounded-full"></div>
-          <span className="text-xl font-bold text-white">Repulens</span>
-        </div>
+        <Logo animated={isScrolled} />
         
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center gap-8">

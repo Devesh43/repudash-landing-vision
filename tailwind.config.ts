@@ -112,6 +112,28 @@ export default {
 				'fade-in': {
 					'0%': { opacity: '0' },
 					'100%': { opacity: '1' }
+				},
+				'scale-in': {
+					'0%': { transform: 'scale(0.9)', opacity: '0' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'bounce-slow': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'rotate-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
+				},
+				'shimmer': {
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(100%)' }
+				},
+				'ping-slow': {
+					'75%, 100%': {
+						transform: 'scale(2)',
+						opacity: '0'
+					}
 				}
 			},
 			animation: {
@@ -121,7 +143,12 @@ export default {
 				'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
 				'wave': 'wave 15s ease-in-out infinite',
 				'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
-				'fade-in': 'fade-in 0.8s ease-out forwards'
+				'fade-in': 'fade-in 0.8s ease-out forwards',
+				'scale-in': 'scale-in 0.5s ease-out forwards',
+				'bounce-slow': 'bounce-slow 3s ease-in-out infinite',
+				'rotate-slow': 'rotate-slow 15s linear infinite',
+				'shimmer': 'shimmer 2.5s infinite',
+				'ping-slow': 'ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite'
 			},
 			backgroundImage: {
 				'hero-gradient': 'linear-gradient(to bottom right, rgba(255, 206, 0, 0.15), rgba(0, 0, 0, 0.9))',
